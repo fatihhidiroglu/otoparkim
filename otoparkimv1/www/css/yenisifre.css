@@ -1,0 +1,106 @@
+﻿* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    background-color: #bdbdbd !important;
+    background-attachment: fixed;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 100%;
+    text-transform: uppercase;
+    width: 100%;
+    font-family: 'RobotoRegular', 'Droid Sans', 'Segoe UI', Segoe, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+    font-size: 12px;
+    padding: 15px;
+    margin: 0px;
+}
+
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position: left center;
+        padding: 75px 0px 75px 170px;
+        margin: -90px 0px 0px -198px;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+@media only screen and (max-width:400px) {
+}
+
+.panel {
+    margin-top: 20% !important;
+    margin-bottom: 20% !important;
+    background-color: #bdbdbd !important;
+    border: 0px solid !important;
+    box-shadow: 0 0 0 rgba(0,0,0,.05) !important;
+}
+
+.panel-default {
+    border-color: #bdbdbd !important;
+}
+
+
+
+.text-center > h3 {
+    padding-top: 15%;
+    padding-bottom: 40%;
+}
+
+.input-group {
+    margin-bottom: 7%;
+}
+.input-group .form-control:first-child, .input-group-addon:first-child, .input-group-btn:first-child > .btn, .input-group-btn:first-child > .btn-group > .btn, .input-group-btn:first-child > .dropdown-toggle, .input-group-btn:last-child > .btn-group:not(:last-child) > .btn, .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle)
+{
+    border-top-left-radius: 25px !important;
+    border-bottom-left-radius: 25px !important;
+
+}
+.form-control {
+    border-top-right-radius: 25px !important;
+    border-bottom-right-radius: 25px !important;
+}
+
+.btn-success {
+    background-color: #009688 !important;
+    border-color: #009688 !important;
+    border-radius: 25px !important;
+}
+
+.btn-warning {
+    background-color: #ef5350 !important;
+    border-color: #ef5350 !important;
+    border-radius: 25px !important;
+}
+
+

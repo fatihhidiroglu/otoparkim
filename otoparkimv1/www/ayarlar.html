@@ -1,0 +1,428 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Aşağıdaki meta etiketindeki içerik güvenliği ilkesini gerektiği gibi özelleştirin. Satır içi JavaScript’i etkinleştirmek için default-src’ye “unsafe-inline” özelliği ekleyin.
+    Ayrıntılı bilgi için http://go.microsoft.com/fwlink/?LinkID=617521 adresini ziyaret edin.
+    -->
+    <!--
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    -->
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+
+    <script src="scripts/sidebarNavigation.js"></script>
+    <link href="css/ayarlar.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/sidebarNavigation.css">
+
+    <title>otoparkım</title>
+    <style>
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-inverse sidebarNavigation" data-sidebarClass="navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle left-navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <h4 class="header">AYARLAR</h4>
+
+                <button type="button" id="prf_button" class="btn btn-info" data-toggle="collapse" data-target="#profile"><i class="fa fa-user fa-lg user" aria-hidden="true"></i></button>
+                <div id="profile" class="collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="profil.html"><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>&nbsp;Profil</a></li>
+                        <li id="lnkAyarlar" class="active"><a href="ayarlar.html"><i class="fa fa-cog fa-lg" aria-hidden="true"></i>&nbsp;Ayarlar</a></li>
+                        <li><a href="index.html"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>&nbsp;Çıkış</a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <div class="sideMenu-logo"><img src="images/logoo.png" /></div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="anasayfa.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ANA SAYFA</a></li>
+                        <li><a href="aracgirisi.html"><i class="fa fa-arrow-circle-o-up fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARAÇ GİRİŞİ</a></li>
+                        <li><a href="araccikisi.html"><i class="fa fa-arrow-circle-o-down fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARAÇ ÇIKIŞI</a></li>
+                        <li><a href="araclistesi.html"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARAÇ LİSTESİ</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="hakkinda.html"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HAKKINDA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <form>
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <ul class="nav nav-tabs" id="tabcontrol">
+                        <li class="active"><a data-toggle="tab" href="#kullaniciislemleri"><i class="fa fa-users" aria-hidden="true"></i>&nbsp; Kullanıcı İşlemleri</a></li>
+                        <li><a data-toggle="tab" href="#ucretislemleri"><i class="fa fa-try" aria-hidden="true"></i>&nbsp; Ücret İşlemleri</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="kullaniciislemleri" class="tab-pane fade in active">
+
+                            <div class="form-group col-xs-8 col-sm-8 col-md-8">
+                                <label for="TC"><strong>Personel TC:</strong></label><br />
+                                <input class="form-control" id="tc" name="tc" type="text" maxlength="11" placeholder="TC Kimlik Numarası Giriniz" />
+
+                            </div>
+                            <div class="form-group col-xs-4 col-sm-4 col-md-4">
+                                <label>&nbsp; </label>
+                                <a id="getir" class="btn btn-success form-control"><i class="fa fa-id-card-o" aria-hidden="true"></i>&nbsp;Getir</a>
+
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                                <label for="ad"><strong>Personel Adı:</strong></label><br />
+                                <input class="form-control" id="adi" name="adi" type="text" placeholder="Ad Giriniz" />
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                                <label for="soyad"><strong>Personel Soyadı:</strong></label><br />
+                                <input class="form-control" id="soyadi" name="soyadi" type="text" placeholder="Soyad Giriniz" />
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                                <label for="phone"><strong>Telefon:</strong></label><br />
+                                <input type="tel" class="form-control" placeholder="Telefon Giriniz" pattern="[0-5]{4} [0-9]{3} [0-9]{4}" maxlength="12" title="Ten digits code" id="telefon" name="telefon">
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                                <label for="mail"><strong>E-Mail:</strong></label><br />
+                                <input class="form-control" id="mail" name="mail" type="email" placeholder="E-Posta Adresi Giriniz" />
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                                <label for="adres"><strong>Adres:</strong></label><br />
+                                <textarea class="form-control" rows="3" id="adres" name="adres" placeholder="Adres Giriniz"></textarea>
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                                <label for="kullanici_adi"><strong>Kullanıcı Adı:</strong></label><br />
+                                <input class="form-control" id="kullanici_adi" name="kullanici_adi" type="text" placeholder="Kullanıcı Adı Giriniz" />
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                                <label for="kullanici_sifre"><strong>Kullanıcı Şifre:</strong></label><br />
+                                <input class="form-control" id="kullanici_sifre" name="kullanici_sifre" type="text" placeholder="Şifre Giriniz" />
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12" style="padding:0px;">
+                                <a id="ekle" class="btn btn-success" style="display:inline-block;    width: auto !important;"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Kullanıcı Ekle/Güncelle</a>
+
+                                <a id="cikar" class="btn btn-primary " style="display:inline-block;    width: auto !important;"><i class="fa fa-user-times" aria-hidden="true"></i>&nbsp;Kullanıcı Çıkar</a>
+                                <input type="hidden" name="kullanici_id" id="kullanici_id" value="" />
+                                <input type="hidden" name="kullanici_turu" id="kullanici_turu" value="2" />
+                                <input type="hidden" name="id" id="id" value="" />
+                            </div>
+
+
+                        </div>
+
+                        <div id="ucretislemleri" class="tab-pane fade">
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                                <label for="ucret"><strong>Otopark Saatlik Ücret:</strong></label><br />
+                                <input class="form-control" id="deger" name="deger" type="text" placeholder="1 TL" />
+                            </div>
+                            <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                                <input type="hidden" name="tablo_id" id="tablo_id" value="4" />
+                                <input type="hidden" name="eleman_id" id="eleman_id" value="1" />
+                                <a id="guncelle" class="btn btn-danger"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Güncelle</a>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script>
+            $(document).ready(function () {
+
+                if (localStorage.getItem("kullanici_turu") != "1") {
+                    $("#lnkAyarlar").css("display", "none");
+                }
+                else {
+                    $("#lnkAyarlar").css("display", "initial");
+                }
+
+                $("#id").val("-1");
+                $("#kullanici_id").val(localStorage.getItem("id"));
+
+                $('#ekle').click(function (e) {
+                    e.preventDefault();
+
+                    if ($("#id").val() == "-1") {
+
+                        if ($('#adi').val().trim().length == 0 ||
+                            $('#tc').val().trim().length == 0 ||
+                            $('#soyadi').val().trim().length == 0 ||
+                            $('#adres').val().trim().length == 0 ||
+                            $('#telefon').val().trim().length == 0 ||
+                            $('#mail').val().trim().length == 0 ||
+                            $('#kullanici_adi').val().trim().length == 0 ||
+                            $('#kullanici_sifre').val().trim().length == 0) {
+                            alert("Tüm Alanları Doldurmalısınız!");
+                            return false;
+                        }
+
+                        //serialize form data
+                        var url = $('form').serialize();
+
+                        //function to turn url to an object
+                        function getUrlVars(url) {
+                            var hash;
+                            var myJson = {};
+                            var hashes = url.slice(url.indexOf('?') + 1).split('&');
+                            for (var i = 0; i < hashes.length; i++) {
+                                hash = hashes[i].split('=');
+                                myJson[hash[0]] = hash[1];
+                            }
+                            return JSON.stringify(myJson);
+                        }
+
+                        //pass serialized data to function
+                        var test = getUrlVars(url);
+
+                        //post with ajax
+                        $.ajax({
+                            type: "POST",
+                            url: "//borednerdy.com/otoparkim/api/oto_kullanicilar/create.php",
+                            data: test,
+                            ContentType: "application/json",
+
+                            success: function (data) {
+                                if (data.kod == '1') {
+                                    alert(data.message);
+                                    window.location.href = 'anasayfa.html';
+                                }
+                                else {
+                                    alert(data.message);
+                                }
+                            }
+                        });
+                    }
+                    else {
+
+                        if ($('#adi').val().trim().length == 0 ||
+                            $('#tc').val().trim().length == 0 ||
+                            $('#soyadi').val().trim().length == 0 ||
+                            $('#adres').val().trim().length == 0 ||
+                            $('#telefon').val().trim().length == 0 ||
+                            $('#mail').val().trim().length == 0 ||
+                            $('#kullanici_adi').val().trim().length == 0 ) {
+                            alert("Tüm Alanları Doldurmalısınız!");
+                            return false;
+                        }
+
+                        //serialize form data
+                        var url = $('form').serialize();
+
+                        //function to turn url to an object
+                        function getUrlVars(url) {
+                            var hash;
+                            var myJson = {};
+                            var hashes = url.slice(url.indexOf('?') + 1).split('&');
+                            for (var i = 0; i < hashes.length; i++) {
+                                hash = hashes[i].split('=');
+                                myJson[hash[0]] = hash[1];
+                            }
+                            return JSON.stringify(myJson);
+                        }
+
+                        //pass serialized data to function
+                        var test = getUrlVars(url);
+
+                        //post with ajax
+                        $.ajax({
+                            type: "PUT",
+                            url: "//borednerdy.com/otoparkim/api/oto_kullanicilar/update.php",
+                            data: test,
+                            contentType: "application/json",
+                            success: function (data) {
+                                if (data.kod == '1') {
+                                    localStorage.setItem("gtc", $("#tc").val());
+                                    localStorage.setItem("gadi", $("#adi").val());
+                                    localStorage.setItem("gsoyadi", $("#soyadi").val());
+                                    localStorage.setItem("gtelefon", $("#telefon").val());
+                                    localStorage.setItem("gmail", $("#mail").val());
+                                    localStorage.setItem("gadres", $("#adres").val());
+                                    localStorage.setItem("gkullanici_adi", $("#kullanici_adi").val());
+                                    alert(data.message);
+                                    window.location.href = 'anasayfa.html';
+                                }
+                                else {
+                                    alert(data.message);
+                                }
+                            }
+
+                        });
+                    }
+                });
+
+                $('#cikar').click(function (e) {
+                    e.preventDefault();
+
+                    if ($("#id").val() != "-1" && confirm('Kullanıcıyı Silmek İstediğinizden Emin misiniz?'))
+                    {
+
+                        //serialize form data
+                        var url = $('form').serialize();
+
+                        //function to turn url to an object
+                        function getUrlVars(url) {
+                            var hash;
+                            var myJson = {};
+                            var hashes = url.slice(url.indexOf('?') + 1).split('&');
+                            for (var i = 0; i < hashes.length; i++) {
+                                hash = hashes[i].split('=');
+                                myJson[hash[0]] = hash[1];
+                            }
+                            return JSON.stringify(myJson);
+                        }
+
+                        //pass serialized data to function
+                        var test = getUrlVars(url);
+
+                        //post with ajax
+                        $.ajax({
+                            type: "DELETE",
+                            url: "//borednerdy.com/otoparkim/api/oto_kullanicilar/delete.php",
+                            data: test,
+                            contentType: "application/json",
+                            success: function (data) {
+                                if (data.kod == '1') {
+                                    alert(data.message);
+                                    window.location.href = 'anasayfa.html';
+                                }
+                                else {
+                                    alert(data.message);
+                                }
+                            }
+
+                        });
+                    }
+                });
+
+                $('#getir').click(function (e) {
+                    e.preventDefault();
+
+                    if ($('#tc').val().trim().length == 0) {
+                        alert("TC Kimlik Numarası Alanını Doldurmalısınız!");
+                        return false;
+                    }
+
+                    //post with ajax
+                    $.ajax({
+                        type: "GET",
+                        url: "//borednerdy.com/otoparkim/api/oto_kullanicilar/read_single_tc.php",
+                        data: { tc: $('#tc').val(), kullanici_id: $('#kullanici_id').val() },
+                        ContentType: "application/json",
+                        success: function (data) {
+                            if (data.id != null) {
+                                localStorage.setItem("gid", data.id);
+                                localStorage.setItem("gtc", data.tc);
+                                localStorage.setItem("gadi", data.adi);
+                                localStorage.setItem("gsoyadi", data.soyadi);
+                                localStorage.setItem("gtelefon", data.telefon);
+                                localStorage.setItem("gmail", data.mail);
+                                localStorage.setItem("gadres", data.adres);
+                                localStorage.setItem("gkullanici_turu", data.kullanici_turu);
+                                localStorage.setItem("gkullanici_id", data.kullanici_id);
+                                localStorage.setItem("gkullanici_adi", data.kullanici_adi);
+
+                                $("#id").val(decodeURIComponent(localStorage.getItem("gid")));
+                                $("#tc").val(decodeURIComponent(localStorage.getItem("gtc")));
+                                $("#adi").val(decodeURIComponent(localStorage.getItem("gadi")));
+                                $("#soyadi").val(decodeURIComponent(localStorage.getItem("gsoyadi")));
+                                $("#telefon").val(decodeURIComponent(localStorage.getItem("gtelefon")));
+                                $("#mail").val(decodeURIComponent(localStorage.getItem("gmail")));
+                                $("#adres").val(decodeURIComponent(localStorage.getItem("gadres")));
+                                $("#kullanici_adi").val(decodeURIComponent(localStorage.getItem("gkullanici_adi")));
+                                $("#kullanici_id").val(decodeURIComponent(localStorage.getItem("gkullanici_id")));
+                                $("#kullanici_turu").val(decodeURIComponent(localStorage.getItem("gkullanici_turu")));
+                            }
+                            else {
+                                alert("Kullanıcı Bulunamadı!");
+                            }
+                        }
+                    });
+                });
+
+            $('#guncelle').click(function (e) {
+                e.preventDefault();
+
+         //serialize form data
+                var url = $('form').serialize();
+
+                //function to turn url to an object
+                function getUrlVars(url) {
+                    var hash;
+                    var myJson = {};
+                    var hashes = url.slice(url.indexOf('?') + 1).split('&');
+                    for (var i = 0; i < hashes.length; i++) {
+                        hash = hashes[i].split('=');
+                        myJson[hash[0]] = hash[1];
+                    }
+                    return JSON.stringify(myJson);
+                }
+
+
+                //pass serialized data to function
+                var test = getUrlVars(url);
+
+                if ($('#deger').val().trim().length == 0 ) {
+                    alert("Ücret Belirtmelisiniz!");
+                    return false;
+                }
+
+                //post with ajax
+                $.ajax({
+                    type: "PUT",
+                    url: "//borednerdy.com/otoparkim/api/oto_sozluk/update.php",
+                    data: test,
+                    ContentType: "application/json",
+                    success: function (data) {
+                        if (data.kod == '1') {
+                            alert(data.message);
+                                    localStorage.setItem("ucret", $('#deger').val());
+
+                            window.location.href = 'anasayfa.html';
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+                });
+            });
+
+            });
+    </script>
+</body>
+</html>

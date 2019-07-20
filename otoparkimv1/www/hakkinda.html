@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Aşağıdaki meta etiketindeki içerik güvenliği ilkesini gerektiği gibi özelleştirin. Satır içi JavaScript’i etkinleştirmek için default-src’ye “unsafe-inline” özelliği ekleyin.
+    Ayrıntılı bilgi için http://go.microsoft.com/fwlink/?LinkID=617521 adresini ziyaret edin.
+    -->
+    <!--
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    -->
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+
+    <script src="scripts/sidebarNavigation.js"></script>
+    <link href="css/hakkinda.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/sidebarNavigation.css">
+
+    <title>otoparkım</title>
+    <style>
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-inverse sidebarNavigation" data-sidebarClass="navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle left-navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <h4 class="header">HAKKINDA</h4>
+
+                <button type="button" id="prf_button" class="btn btn-info" data-toggle="collapse" data-target="#profile"><i class="fa fa-user fa-lg user" aria-hidden="true"></i></button>
+                <div id="profile" class="collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="profil.html"><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>&nbsp;Profil</a></li>
+                        <li id="lnkAyarlar"><a href="ayarlar.html"><i class="fa fa-cog fa-lg" aria-hidden="true"></i>&nbsp;Ayarlar</a></li>
+                        <li><a href="index.html"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>&nbsp;Çıkış</a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <div class="sideMenu-logo"><img src="images/logoo.png" /></div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="anasayfa.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ANA SAYFA</a></li>
+                        <li><a href="aracgirisi.html"><i class="fa fa-arrow-circle-o-up fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARAÇ GİRİŞİ</a></li>
+                        <li><a href="araccikisi.html"><i class="fa fa-arrow-circle-o-down fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARAÇ ÇIKIŞI</a></li>
+                        <li><a href="araclistesi.html"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARAÇ LİSTESİ</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="active"><a href="hakkinda.html"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HAKKINDA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <img src="images/icon-index.png" />
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h4 class="baslik">OTOPARKIM</h4>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <p class="v">
+                    <strong>Versiyon Kodu:</strong>
+                    1.0.0
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <p class="copy">
+                    Telif Hakkı&nbsp;<span><i class="fa fa-copyright" aria-hidden="true"></i></span>&nbsp;FTH 2019
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            if (localStorage.getItem("kullanici_turu") != "1") {
+                $("#lnkAyarlar").css("display", "none");
+            }
+            else {
+                $("#lnkAyarlar").css("display", "initial");
+            }
+        });
+    </script>
+</body>
+</html>

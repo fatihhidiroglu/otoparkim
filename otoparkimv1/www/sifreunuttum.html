@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Aşağıdaki meta etiketindeki içerik güvenliği ilkesini gerektiği gibi özelleştirin. Satır içi JavaScript’i etkinleştirmek için default-src’ye “unsafe-inline” özelliği ekleyin.
+    Ayrıntılı bilgi için http://go.microsoft.com/fwlink/?LinkID=617521 adresini ziyaret edin.
+    -->
+    <!--
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    -->
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+
+
+    <link href="css/sifremiunuttum.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/sidebarNavigation.css">
+
+    <title>otoparkım</title>
+    <script>
+
+    </script>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                            <h3 class="text-center">ŞİFREMİ UNUTTUM</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-at" aria-hidden="true"></i></span>
+                                <input class="form-control" id="mail" name="mail" type="email" placeholder="E-mail Adresi Giriniz" />
+                            </div>
+                            <div class="input-group pull-right">
+                                <a class="btn btn-success" id="btnGiris"><i class="fa fa-paper-plane" aria-hidden="true"></i> Gönder </a>
+                            </div>
+                            <div class="input-group pull-left">
+                                <a href="index.html" class="btn btn-warning" id="btnGeri"><i class="fa fa-ban" aria-hidden="true"></i>&nbsp;iptal Et</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#btnGiris').click(function (e) {
+                e.preventDefault();
+
+
+                $.ajax({
+                    type: "GET",
+                    url: "//borednerdy.com/otoparkim/api/oto_kullanicilar/getMail.php",
+                    data: { mail:$('#mail').val() },
+                    ContentType: "application/json",
+                    success: function (data) {
+                        alert(data.message);
+                        window.location.href = 'index.html';
+                    },
+                    error: function () {
+                        alert('Could not be posted');
+                    }
+
+                });
+            });
+        });
+    </script>
+</body>
+</html>

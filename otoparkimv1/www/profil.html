@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Aşağıdaki meta etiketindeki içerik güvenliği ilkesini gerektiği gibi özelleştirin. Satır içi JavaScript’i etkinleştirmek için default-src’ye “unsafe-inline” özelliği ekleyin.
+    Ayrıntılı bilgi için http://go.microsoft.com/fwlink/?LinkID=617521 adresini ziyaret edin.
+    -->
+    <!--
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    -->
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+
+    <script src="scripts/sidebarNavigation.js"></script>
+    <link href="css/profil.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/sidebarNavigation.css">
+
+    <title>otoparkım</title>
+    <style>
+    </style>
+</head>
+<body>
+
+
+    <nav class="navbar navbar-inverse sidebarNavigation" data-sidebarClass="navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle left-navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <h4 class="header">PROFİL</h4>
+
+                <button type="button" id="prf_button" class="btn btn-info" data-toggle="collapse" data-target="#profile"><i class="fa fa-user fa-lg user" aria-hidden="true"></i></button>
+                <div id="profile" class="collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="profil.html"><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>&nbsp;Profil</a></li>
+                        <li id="lnkAyarlar"><a href="ayarlar.html"><i class="fa fa-cog fa-lg" aria-hidden="true"></i>&nbsp;Ayarlar</a></li>
+                        <li><a href="index.html"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>&nbsp;Çıkış</a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <div class="sideMenu-logo"><img src="images/logoo.png" /></div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="anasayfa.html"><i class="fa fa-home fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ANA SAYFA</a></li>
+                        <li><a href="aracgirisi.html"><i class="fa fa-arrow-circle-o-up fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARAÇ GİRİŞİ</a></li>
+                        <li><a href="araccikisi.html"><i class="fa fa-arrow-circle-o-down fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARAÇ ÇIKIŞI</a></li>
+                        <li><a href="araclistesi.html"><i class="fa fa-list-alt fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARAÇ LİSTESİ</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li><a href="hakkinda.html"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HAKKINDA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <form>
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="media">
+                                <div class="media-left">
+                                    <img src="images/avatar.png" class="media-object" style="width:90px">
+                                </div>
+                                <div class="input-group">
+                                    <input class="form-control" id="kullanici_adi" name="kullanici_adi" type="text" placeholder="Kullanıcı Adı" readonly="readonly" />
+
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <p>
+                                <label for="TC"><strong>Personel TC:</strong></label><br />
+                                <div class="media-body">
+                                    <input class="form-control" id="tc" name="tc" type="text" maxlength="11" placeholder="Tc Kimlik Numarası Giriniz" readonly="readonly" 
+                            </p>
+                            <p>
+                                <label for="ad"><strong>Personel Adı:</strong></label><br />
+                                <div class="media-body">
+                                    <input class="form-control" id="adi" name="adi" type="text" placeholder="Ad Giriniz" />
+                                </div>
+                            </p>
+                            <p>
+                                <label for="soyad"><strong>Personel Soyadı:</strong></label><br />
+                                <div class="media-body">
+                                    <input class="form-control" id="soyadi" name="soyadi" placeholder="Soyad Giriniz" />
+                                </div>
+                            </p>
+                            <p>
+                                <label for="phone"><strong>Telefon:</strong></label><br />
+                                <div class="media-body">
+                                    <input type="tel" class="form-control" placeholder="Telefon Giriniz" pattern="[0-5]{4} [0-9]{3} [0-9]{4}" maxlength="12" title="Ten digits code" id="telefon" name="telefon">
+                                </div>
+                            </p>
+                            <p>
+                                <label for="mail"><strong>E-Mail:</strong></label><br />
+                                <div class="media-body">
+                                    <input class="form-control" id="mail" name="mail" type="email" placeholder="E-Posta ADresi Giriniz" />
+                                </div>
+                            </p>
+                            <p>
+                                <label for="adres"><strong>Adres:</strong></label><br />
+                                <div class="media-body">
+                                    <textarea class="form-control" rows="3" id="adres" name="adres" placeholder="Adres Giriniz"></textarea>
+                                </div>
+                            </p>
+                            <p>
+                                <label for="yeni_sifre"><strong>Yeni Şifre:</strong></label><br />
+                                <div class="media-body">
+                                    <input class="form-control" id="kullanici_sifre" name="kullanici_sifre" type="text" />
+                                </div>
+                            </p>
+                            <input type="hidden" name="kullanici_id" id="kullanici_id" value="" />
+                            <input type="hidden" name="kullanici_turu" id="kullanici_turu" value="" />
+                            <input type="hidden" name="id" id="id" value="" />
+                            <a id="guncelle" class="btn btn-success pull-right"><i class="fa fa-floppy-o" aria-hidden="true"></i>&nbsp;Güncelle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+           
+                if (localStorage.getItem("kullanici_turu") != "1")
+                {
+                    $("#lnkAyarlar").css("display", "none");
+                }
+                else
+                {
+                    $("#lnkAyarlar").css("display", "initial");
+                }
+           
+
+            $("#id").val(decodeURIComponent(localStorage.getItem("id")));
+            $("#tc").val(decodeURIComponent(localStorage.getItem("tc")));
+            $("#adi").val(decodeURIComponent(localStorage.getItem("adi")));
+            $("#soyadi").val(decodeURIComponent(localStorage.getItem("soyadi")));
+            $("#telefon").val(decodeURIComponent(localStorage.getItem("telefon")));
+            $("#mail").val(decodeURIComponent(localStorage.getItem("mail")));
+            $("#adres").val(decodeURIComponent(localStorage.getItem("adres")));
+            $("#kullanici_adi").val(decodeURIComponent(localStorage.getItem("kullanici_adi")));
+            $("#kullanici_id").val(decodeURIComponent(localStorage.getItem("kullanici_id")));
+            $("#kullanici_turu").val(decodeURIComponent(localStorage.getItem("kullanici_turu")));
+
+            $('#guncelle').click(function (e) {
+                e.preventDefault();
+
+                if ($('#adi').val().trim().length == 0 ||
+                    $('#tc').val().trim().length == 0 ||
+                    $('#soyadi').val().trim().length == 0 ||
+                    $('#adres').val().trim().length == 0 ||
+                    $('#telefon').val().trim().length == 0 ||
+                    $('#mail').val().trim().length == 0 ||
+                    $('#kullanici_adi').val().trim().length == 0 ) {
+                    alert("Tüm Alanları Doldurmalısınız!");
+                    return false;
+                }
+
+                //serialize form data
+                var url = $('form').serialize();
+
+                //function to turn url to an object
+                function getUrlVars(url) {
+                    var hash;
+                    var myJson = {};
+                    var hashes = url.slice(url.indexOf('?') + 1).split('&');
+                    for (var i = 0; i < hashes.length; i++) {
+                        hash = hashes[i].split('=');
+                        myJson[hash[0]] = hash[1];
+                    }
+                    return JSON.stringify(myJson);
+                }
+
+                //pass serialized data to function
+                var test = getUrlVars(url);
+
+                //post with ajax
+                $.ajax({
+                    type: "PUT",
+                    url: "//borednerdy.com/otoparkim/api/oto_kullanicilar/update.php",
+                    data: test,
+                    contentType: "application/json",
+                    success: function (data) {
+                        if (data.kod == '1') {
+                           localStorage.setItem("tc",$("#tc").val());
+                           localStorage.setItem("adi",$("#adi").val());
+                           localStorage.setItem("soyadi",$("#soyadi").val());
+                           localStorage.setItem("telefon",$("#telefon").val());
+                           localStorage.setItem("mail",$("#mail").val());
+                           localStorage.setItem("adres",$("#adres").val());
+                            alert(data.message);
+                            window.location.href = 'anasayfa.html';
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+
+                });
+            });
+        });
+    </script>
+</body>
+</html>

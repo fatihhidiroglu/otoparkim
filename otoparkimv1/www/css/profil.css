@@ -1,0 +1,218 @@
+﻿body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    background-color: #cfd8dc !important;
+    background-attachment: fixed;
+    font-family: 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    height: 100%;
+    /* text-transform: uppercase;*/
+    width: 100%;
+    font-family: 'RobotoRegular', 'Droid Sans', 'Segoe UI', Segoe, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
+    font-size: 12px;
+    margin: 0px;
+}
+
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position: left center;
+        padding: 75px 0px 75px 170px;
+        margin: -90px 0px 0px -198px;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+@media only screen and (max-width:400px) {
+}
+
+.header {
+    color: #eceff1 !important;
+    margin-left: 45%;
+    margin-top: 4%;
+    font-family: initial !important;
+}
+
+.sideMenu-logo {
+    background-color: #546e7a;
+}
+
+    .sideMenu-logo img {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin-left: 35%;
+    }
+
+#myNavbar {
+    background-color: #cfd8dc;
+}
+
+.navbar navbar-inverse sidebarNavigation {
+    background-color: #455a64 !important;
+}
+
+.navbar-header {
+    background-color: #455a64 !important;
+}
+
+.navbar-inverse {
+    border-color: #455a64 !important;
+}
+
+    .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+        background-color: #546e7a !important;
+    }
+
+    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+        background-color: #78909c !important;
+        height: 45px !important;
+        padding-top: 12px !important;
+        color: #eceff1 !important;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #263238 !important;
+        font-family: initial !important;
+    }
+
+.panel-default {
+    margin-top: 17% !important;
+    border-color: #b0bec5 !important;
+}
+
+.panel {
+    background-color: #cfd8dc !important;
+}
+
+.panel-body {
+    padding: 10px !important;
+}
+
+.media:first-child {
+    margin: 5% 0 0 5% !important;
+}
+
+.media-heading {
+    margin-top: 15% !important;
+    margin-left: 20% !important;
+}
+
+hr {
+    margin-top: 25px !important;
+    margin-bottom: 40px !important;
+    border-top: 1px solid #b0bec5 !important;
+}
+
+strong,#guncelle {
+    font-variant: small-caps;
+}
+#guncelle{
+    color:#fff;
+}
+.form-control {
+    border-radius: 25px !important;
+}
+
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:first-child > .btn-group:not(:first-child) > .btn, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle {
+    margin: -30% 0 0 55% !important;
+}
+
+.btn-success {
+    padding: 2px 10px;
+    background-color: #009688 !important;
+    border-color: #009688 !important;
+    border-radius: 25px !important;
+    margin-top: 3%;
+    width: 100%;
+}
+
+#prf_button {
+    color: #eceff1 !important;
+    position: relative;
+    padding: 6px 14px;
+    margin-right: 15px;
+    margin-top: -37px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    /* border: 1px solid transparent; */
+    border-radius: 4px;
+    border-color: #333 !important;
+    float: right;
+}
+
+    #prf_button:focus, #prf_button:hover {
+        background-color: #546e7a !important
+    }
+
+    #prf_button:focus {
+        outline: 0;
+    }
+
+    #prf_button collapsed {
+        margin-top: -37px;
+        margin-right: 15px;
+        margin-bottom: 8px;
+        padding: 6px 14px;
+        color: #eceff1 !important;
+        background-color: transparent;
+        border-radius: 4px;
+        border-color: #333 !important;
+        float: right;
+    }
+
+#profile.collapse.in {
+    float: right;
+    margin-top: 0px;
+    display: block !important;
+    padding-top: 0px;
+}
+
+#profile {
+    width: 100%;
+}
+
+    #profile > ul {
+        margin-left: -12%;
+        background-color: #546e7a;
+        padding: 0 0 0 5%;
+        margin: 0 0 0 0;
+    }
+
+        #profile > ul > li {
+            display: inline-block;
+            font-family: initial !important;
+        }
+
+            #profile > ul > li > a {
+                display: inline-block;
+                color: #eceff1 !important;
+                font-family: initial !important;
+                text-transform: uppercase;
+            }

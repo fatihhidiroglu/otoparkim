@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Aşağıdaki meta etiketindeki içerik güvenliği ilkesini gerektiği gibi özelleştirin. Satır içi JavaScript’i etkinleştirmek için default-src’ye “unsafe-inline” özelliği ekleyin.
+    Ayrıntılı bilgi için http://go.microsoft.com/fwlink/?LinkID=617521 adresini ziyaret edin.
+    -->
+    <!--
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    -->
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+
+
+    <link href="css/kayitol.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/sidebarNavigation.css">
+
+    <title>otoparkım</title>
+    <script>
+
+    </script>
+</head>
+<body>
+
+    <form>
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                            <h3 class="text-center">KAYIT OL</h3>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <div class="input-group">
+                                <input class="form-control" name="adi" id="adi" type="text" placeholder="Adınızı Giriniz" required />
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" name="soyadi" id="soyadi" type="text" placeholder="Soyadınızı Giriniz" required />
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" name="adres" id="adres" type="text" placeholder="Adres Giriniz" required />
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" name="telefon" id="telefon" type="text" placeholder="Telefon Giriniz" required />
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" name="mail" id="email" type="email" placeholder="E-Mail Giriniz" required />
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" name="kullanici_adi" id="kullanici_adi" type="text" placeholder="Kullanıcı Adı Giriniz" required />
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" name="kullanici_sifre" id="kullanici_sifre" type="text" placeholder="Şifre Giriniz" required />
+                            </div>
+                            <input type="hidden" name="kullanici_turu" value="1" />
+                            <input type="hidden" name="kullanici_id" value="-1" />
+
+                            <a href="#" class="btn btn-success" id="btnGiris"><i class="fa fa-user-plus" aria-hidden="true"></i> Kayıt Ol </a>
+
+
+                            <a href="index.html" class="btn btn-warning" id="btnGeri"><i class="fa fa-ban" aria-hidden="true"></i>&nbsp;Vazgeç</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#btnGiris').click(function (e) {
+                e.preventDefault();
+
+                if ($('#adi').val().trim().length == 0 ||
+                    $('#soyadi').val().trim().length == 0 ||
+                    $('#adres').val().trim().length == 0 ||
+                    $('#telefon').val().trim().length == 0 ||
+                    $('#email').val().trim().length == 0 ||
+                    $('#kullanici_adi').val().trim().length == 0 ||
+                    $('#kullanici_sifre').val().trim().length == 0) {
+                    alert("Tüm Alanları Doldurmalısınız!");
+                    return false;
+                }
+
+                //serialize form data
+                var url = $('form').serialize();
+
+                //function to turn url to an object
+                function getUrlVars(url) {
+                    var hash;
+                    var myJson = {};
+                    var hashes = url.slice(url.indexOf('?') + 1).split('&');
+                    for (var i = 0; i < hashes.length; i++) {
+                        hash = hashes[i].split('=');
+                        myJson[hash[0]] = hash[1];
+                    }
+                    return JSON.stringify(myJson);
+                }
+
+                //pass serialized data to function
+                var test = getUrlVars(url);
+
+                //post with ajax
+                $.ajax({
+                    type: "POST",
+                    url: "//borednerdy.com/otoparkim/api/oto_kullanicilar/create.php",
+                    data: test,
+                    ContentType: "application/json",
+
+                    success: function (data) {
+                        if (data.kod == '1') {
+                            alert(data.message);
+                            window.location.href = 'index.html';
+                        }
+                        else {
+                            alert(data.message);
+                        }
+                    }
+
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
