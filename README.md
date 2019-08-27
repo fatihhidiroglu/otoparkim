@@ -2,7 +2,7 @@
 <img src="otoparkimv1/www/images/icon-index.png"/>
 
 <i>Visual Studio 2017</i> de <i>Apache Cordova</i> platformunda kodlanmıştır. Tasarımda `Bootstrap 3` CSS Frameworku kullanılmıştır.</br>
-Uygulamanın `.apk` dosyası `otoparkimv1/bin/Android/Debug` içerisinde yer almaktadır. </br>
+Uygulamanın `.apk` dosyası [`otoparkimv1/bin/Android/Debug`](https://github.com/fatihhidiroglu/otoparkim/tree/master/otoparkimv1/bin/Android/Debug) içerisinde yer almaktadır. </br>
 
 ![res1](https://user-images.githubusercontent.com/53092493/63802037-63ab1580-c91a-11e9-922a-9da7c5fa5555.png) 
 - `Kayıt Ol` kısmından admin hesabı açılır. Uygulamaya giriş yapıldıktan sonra `Ana Sayfa` ekranı karşılar ve otoparkta olan araçlar listelenir.
