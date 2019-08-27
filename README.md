@@ -5,7 +5,7 @@
 Uygulamanın `.apk` dosyası [`otoparkimv1/bin/Android/Debug`](https://github.com/fatihhidiroglu/otoparkim/tree/master/otoparkimv1/bin/Android/Debug) içerisinde yer almaktadır. </br>
 
 ![res1](https://user-images.githubusercontent.com/53092493/63802037-63ab1580-c91a-11e9-922a-9da7c5fa5555.png) 
-- `Kayıt Ol` kısmından yeni bir admin hesabı açılır. `Şifremi Unuttum` kısmında ise kayıt olurken kullandığımız e-mail hesabına şifremiz gönderilir. Uygulamaya giriş yapıldıktan sonra `Ana Sayfa` ekranı karşılar ve otoparkta olan araçlar listelenir.
+- `Kayıt Ol` kısmından yeni bir admin hesabı açılır. `Şifremi Unuttum` kısmında ise kayıt olurken kullandığımız e-mail hesabına şifremiz gönderilir. Uygulamaya giriş yapıldıktan sonra `Ana Sayfa` ekranı bizi karşılar ve otoparkta olan araçlar listelenir.
 
 ![res2](https://user-images.githubusercontent.com/53092493/63802066-702f6e00-c91a-11e9-8b64-2217cdf98cb6.png)
 - Araç girişi için gerekli bilgiler doldurulduktan sonra eklenen araç `Ana Sayfa` ekranına dahil edilir.
